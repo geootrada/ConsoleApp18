@@ -13,6 +13,7 @@ namespace ConsoleApp18
             string userName;
             char userSymbol;
             string middleString;
+            string frame = "";
 
             Console.WriteLine("Здравствуйте, сейчас мы вместе создадим красивую картинку.");
             Console.WriteLine("Введите ваше имя: ");
@@ -21,17 +22,14 @@ namespace ConsoleApp18
             userSymbol = Console.ReadKey(true).KeyChar;
             middleString = userSymbol + userName + userSymbol;
 
-            for (int i = 0; i < middleString.Length; i++)
+            for (int i = 0; i < middleString.Length; i++) 
+            {
+                frame += userSymbol;
+            }
 
-            Console.Write(userSymbol);
-            Console.WriteLine();
-
+            Console.WriteLine(frame);
             Console.WriteLine(middleString);
-
-            for (int i = 0; i < middleString.Length; i++)
-
-            Console.Write(userSymbol);
-            Console.WriteLine();
+            Console.WriteLine(frame);
         }
     }
 }
